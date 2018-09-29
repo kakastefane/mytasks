@@ -16,7 +16,7 @@
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'San Francisco', sans-serif;
     font-size: 14px;
 }
 
@@ -69,9 +69,14 @@ body {
     border-radius: 100%;
     border: none;
     background-color: var(--verde);
-    color: #FFF;
-    font-size: 14px;
-    line-height: 37px;
+    background-image: url(../icons/add.svg);
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
 }
 .lista li {
     position: relative;
@@ -86,6 +91,9 @@ body {
 .lista li:nth-of-type(even) {
     background-color: #F0F0F0;
 }
+.lista li .checkbox:checked + * {
+    text-decoration: underline;
+}
 .lista li a {
     position: absolute;
     top: 12px;
@@ -94,10 +102,13 @@ body {
     height: 25px;
     border-radius: 100%;
     display: block;
-    text-align: center;
-    font-size: 14px;
-    line-height: 25px;
-    text-decoration: none;
     background-color: var(--vermelho);
-    color: #FFF;
+    background-image: url(../icons/remove.svg);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
 }

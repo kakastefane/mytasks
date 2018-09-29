@@ -18,10 +18,10 @@ function renderTodos() {
 		var pos = todos.indexOf(todo);
 		linkElement.setAttribute('onclick', 'deleteTodo(' + pos + ')');
 		
-		var linkText = document.createElement('i');
-		linkText = document.createElement('i');
-		linkElement.setAttribute('class', 'fa fa-times');
-
+		var linkText = document.createTextNode('Excluir');
+		linkElement.setAttribute('class', 'button');
+		linkElement.appendChild(linkText);
+		
 		todoElement.appendChild(todoText);
 		todoElement.appendChild(linkElement);
 
