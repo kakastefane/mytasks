@@ -1,0 +1,114 @@
+:root {
+    --verde: #2FCC71;
+    --verde-darker: #27AE60;
+    --amarelo: #F1C40F;
+    --amarelo-darker: #F39C13;
+    --vermelho: #E74C3C;
+    --vermelho-darker: #C0382B;
+    --cinza: #ECF0F1;
+    --cinza-darker: #BDC3C7;
+    --preto: #34495E;
+    --preto-darker: #2C3D50;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'San Francisco', sans-serif;
+    font-size: 14px;
+}
+
+body {
+    background-color: var(--cinza);
+    padding-top: 145px;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #FFF;
+    color: var(--preto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.form {
+    position: absolute;
+    top: 70px;
+    left: 5%;
+    width: 90%;
+    margin: 0 auto;
+    z-index: 9999;
+}
+.form.-fixed {
+    position: fixed;
+    top: 20px;
+}
+.form input {
+    width: 100%;
+    height: 55px;
+    padding: 0 55px 0 30px;
+    border: none;
+    outline: none;
+    border-radius: 27.5px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.form button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    border: none;
+    background-color: var(--verde);
+    background-image: url(../icons/add.svg);
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+}
+.lista li {
+    position: relative;
+    width: 100%;
+    padding: 15px 5%;
+    min-height: 47px;
+    display: block;
+    background-color: #FFF;
+    color: var(--preto);
+    font-size: 14px;
+}
+.lista li:nth-of-type(even) {
+    background-color: #F0F0F0;
+}
+.lista li .checkbox:checked + * {
+    text-decoration: underline;
+}
+.lista li a {
+    position: absolute;
+    top: 12px;
+    right: 5%;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    display: block;
+    background-color: var(--vermelho);
+    background-image: url(../icons/remove.svg);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+}

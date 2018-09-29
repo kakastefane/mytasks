@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Tasks</title>
+    <meta name="description" content="Um App para não esquecer das suas tarefas.">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="./assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-title" content="My Tasks">
+    <meta name="application-name" content="My Tasks">
+    <meta name="msapplication-TileColor" content="#34495E">
+    <meta name="theme-color" content="#34495E">
+
+    <link rel="stylesheet" href="./assets/fonts/fonts.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.info('registered sw', reg))
+                .catch(err => console.error('error registering sw', err));
+        }
+    </script>
+
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            My Tasks
+        </header>
+        <div class="form">
+            <input id="input" type="text" placeholder="Digite uma Tarefa">
+            <button id="button">Adicionar</button>
+        </div>
+        <ul id="lista" class="lista"></ul>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="./assets/js/formFix.js"></script>
+</body>
+</html>
